@@ -11,8 +11,8 @@ public static class Commander {
     static Commander()
     {
         Players = new Player[]{
-            new Player("いちたろう",0),
-            new Player("じろう",1),
+            new Player("いちたろう",1),
+            new Player("じろう",2),
         };
 
         Minigames = new MiniGame[]{
