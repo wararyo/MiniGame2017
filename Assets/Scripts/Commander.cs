@@ -7,6 +7,8 @@ public static class Commander {
     public static MiniGame[] Minigames;
 
     public static Player[] Players;
+
+	public const int VICTORY_COUNT = 2;
     
     static Commander()
     {

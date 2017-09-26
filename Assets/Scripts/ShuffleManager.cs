@@ -66,57 +66,54 @@ public class ShuffleManager : MonoBehaviour
         process.Start();
         //process.BeginOutputReadLine();
         process.WaitForExit();
-        string stdout = process.StandardOutput.ReadToEnd();
-        if (!string.IsNullOrEmpty(stdout))
-        {
-            Debug.Log(stdout);
-            if (stdout.StartsWith("1"))//1Pの勝ち
-            {
-                nextMiniGameText.text = "1Pの勝ち！";
-                winner = 1;
-            }
-            else if (stdout.StartsWith("2"))//2Pの勝ち
-            {
-                nextMiniGameText.text = "2Pの勝ち！";
-                winner = 2;
-            }
-        }
-        if (winner == 0) nextMiniGameText.text = "勝敗情報が送信されずに終了しました";
-        StartCoroutine(GotoNextGame());
-    }
-
-    private void OutputHandler(object sender, System.Diagnostics.DataReceivedEventArgs args)
-    {
-        if (!string.IsNullOrEmpty(args.Data))
-        {
-            Debug.Log(args.Data);
-            if (args.Data == "1")//1Pの勝ち
-            {
-                nextMiniGameText.text = "1Pの勝ち！";
-                winner = 1;
-            }
-            else if (args.Data == "2")//2Pの勝ち
-            {
-                nextMiniGameText.text = "2Pの勝ち！";
-                winner = 2;
-            }
-        }
+		OnEndMiniGame(process.StandardOutput.ReadToEnd());
     }
 
     // プロセス終了時.
     private void Process_Exit(object sender, System.EventArgs e)
     {
         System.Diagnostics.Process proc = (System.Diagnostics.Process)sender;
-
         // プロセスを閉じる.
         proc.Kill();
     }
+
+	private void OnEndMiniGame(string stdout){
+		if (!string.IsNullOrEmpty(stdout))
+		{
+			Debug.Log(stdout);
+			if (stdout.StartsWith("1"))//1Pの勝ち
+			{
+				nextMiniGameText.text = "1Pの勝ち！";
+				Commander.Players [0].point++;
+				winner = 1;
+				if (Commander.Players [0].point >= Commander.VICTORY_COUNT) {//1Pの優勝
+					GotoVictoryScene();
+				}
+			}
+			else if (stdout.StartsWith("2"))//2Pの勝ち
+			{
+				nextMiniGameText.text = "2Pの勝ち！";
+				Commander.Players [1].point++;
+				winner = 2;
+				if (Commander.Players [1].point >= Commander.VICTORY_COUNT) {//2Pの優勝
+					GotoVictoryScene();
+				}
+			}
+		}
+		if (winner == 0) nextMiniGameText.text = "勝敗情報が送信されずに終了しました";
+		StartCoroutine(GotoNextGame());
+	}
 
     private IEnumerator GotoNextGame()
     {
         yield return new WaitForSeconds(4);
         SceneManager.LoadSceneAsync("Shuffle");
     }
+
+	private IEnumerator GotoVictoryScene(){
+		yield return new WaitForSeconds (4);
+		SceneManager.LoadSceneAsync ("Victory");
+	}
 
     public string getPath()
     {
