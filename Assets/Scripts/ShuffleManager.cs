@@ -26,6 +26,8 @@ public class ShuffleManager : MonoBehaviour
 
         isGameStartWaiting = true;
 
+        Debug.Log("1P: " + Commander.Players[0].point + " 2P: " + Commander.Players[1].point);
+
     }
 
     // Update is called once per frame
@@ -86,22 +88,26 @@ public class ShuffleManager : MonoBehaviour
 				nextMiniGameText.text = "1Pの勝ち！";
 				Commander.Players [0].point++;
 				winner = 1;
-				if (Commander.Players [0].point >= Commander.VICTORY_COUNT) {//1Pの優勝
-					GotoVictoryScene();
-				}
 			}
 			else if (stdout.StartsWith("2"))//2Pの勝ち
 			{
 				nextMiniGameText.text = "2Pの勝ち！";
 				Commander.Players [1].point++;
 				winner = 2;
-				if (Commander.Players [1].point >= Commander.VICTORY_COUNT) {//2Pの優勝
-					GotoVictoryScene();
-				}
 			}
 		}
 		if (winner == 0) nextMiniGameText.text = "勝敗情報が送信されずに終了しました";
-		StartCoroutine(GotoNextGame());
+
+        if (Commander.Players[0].point >= Commander.VICTORY_COUNT)
+        {//1Pの優勝
+            StartCoroutine(GotoVictoryScene());
+        }
+        else if (Commander.Players[1].point >= Commander.VICTORY_COUNT)
+        {//2Pの優勝
+            StartCoroutine(GotoVictoryScene());
+        }
+        else 
+            StartCoroutine(GotoNextGame());
 	}
 
     private IEnumerator GotoNextGame()

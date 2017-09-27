@@ -8,3 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Shuffle.unity
     guid: 722b00a68344f084497090dda469d6ea
+  - enabled: 1
+    path: Assets/Title.unity
+    guid: e0b61891c452b459caad28cb8c28c894
+  - enabled: 1
+    path: Assets/Victory.unity
+    guid: e99c9c664574b423bb2c4e393e33fe18
