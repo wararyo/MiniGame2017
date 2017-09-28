@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.80689657, b: 0, a: 1}
+  m_Color: {r: 0.99607843, g: 0.8745098, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -262,7 +262,7 @@ GameObject:
   - component: {fileID: 510887084}
   - component: {fileID: 510887086}
   m_Layer: 0
-  m_Name: Image
+  m_Name: NextIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -466,6 +466,7 @@ GameObject:
   - component: {fileID: 1574665849}
   - component: {fileID: 1574665851}
   - component: {fileID: 1574665850}
+  - component: {fileID: 1574665852}
   m_Layer: 0
   m_Name: MCBaloon
   m_TagString: Untagged
@@ -526,6 +527,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1574665848}
+--- !u!114 &1574665852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1574665848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45a2c05eaddd84b52b07ebdc4241419d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baloon: {fileID: 0}
+  text: {fileID: 0}
+  nextIcon: {fileID: 0}
 --- !u!1 &1668212334
 GameObject:
   m_ObjectHideFlags: 0
