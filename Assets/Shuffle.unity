@@ -354,7 +354,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1847088722899264, guid: 43684fb387e3344fb9453cc09763afea, type: 2}
       propertyPath: m_Name
-      value: PointView1P (1)
+      value: PointView2P
       objectReference: {fileID: 0}
     - target: {fileID: 224233856283307242, guid: 43684fb387e3344fb9453cc09763afea,
         type: 2}
