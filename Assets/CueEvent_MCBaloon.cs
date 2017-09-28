@@ -69,8 +69,12 @@ public class CueEvent_MCBaloon : CueEventBase {
 	public override void Cue(object param)
 	{
 		//ここに任意の処理を記述
-		isShowing = true;
-		text.text = (string)param;
+		if (string.IsNullOrEmpty ((string)param)) {
+			isShowing = false;
+		} else {
+			isShowing = true;
+			text.text = (string)param;
+		}
 	}
 
 }

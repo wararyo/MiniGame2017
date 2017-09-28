@@ -22,7 +22,9 @@ public class ShuffleManager : MonoBehaviour
     {
         nextMiniGameID = UnityEngine.Random.Range(0, Commander.Minigames.Length);
 
-        nextMiniGameText.text = "次のゲームは\n" + Commander.Minigames[nextMiniGameID].name + "\nAを押してスタート";
+		int gameCount = Commander.Players [0].point + Commander.Players [1].point + 1;
+
+		nextMiniGameText.text = string.Format ("第{0}回戦", gameCount);//"次のゲームは\n" + Commander.Minigames[nextMiniGameID].name + "\nAを押してスタート";
 
         isGameStartWaiting = true;
 
