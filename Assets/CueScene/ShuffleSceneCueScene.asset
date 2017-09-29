@@ -26,6 +26,12 @@ MonoBehaviour:
     paramObject: {fileID: 11400000, guid: b51b9a659904f46d6bc4b50da8f0696e, type: 2}
     UUID: 
   - time: -1
+    gameObjectName: Canvas/Instruction
+    cueEventID: 656f78s8f9d0n97d
+    parameter: In
+    paramObject: {fileID: 0}
+    UUID: 
+  - time: 0
     gameObjectName: Canvas/MCBaloon
     cueEventID: 4j56789gken765k789sd07jh78
     parameter: 

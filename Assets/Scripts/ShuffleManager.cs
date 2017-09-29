@@ -12,6 +12,7 @@ public class ShuffleManager : MonoBehaviour
 	public PointView pointView1P;
 	public PointView pointView2P;
 	public MiniGameCard miniGameCard;
+	public InstructionUI instruction;
 
 	public List<MiniGame> miniGames;
 
@@ -34,6 +35,8 @@ public class ShuffleManager : MonoBehaviour
 
 		pointView1P.Point = Commander.Players [0].point;
 		pointView1P.Point = Commander.Players [1].point;
+
+		instruction.Initialize (nextMiniGame);
     }
 
     // Update is called once per frame
