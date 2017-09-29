@@ -8,6 +8,8 @@ public static class Commander {
 
     public static Player[] Players;
 
+    public static List<MiniGame> PlayedMiniGames;
+
 	public const int VICTORY_COUNT = 2;
     
     static Commander()
@@ -23,6 +25,16 @@ public static class Commander {
 			new MiniGameLegacy("ESCAPE SPY","MiniGames/ESCAPESPY/ESCAPESPY.exe"),
 			new MiniGameLegacy("Beach Gun Dash","MiniGames/BeachGunDash/BeachGunDash.exe"),
         };
+
+        PlayedMiniGames = new List<MiniGame>();
+
+    }
+
+    public static void Initialize()
+    {
+        PlayedMiniGames.Clear();
+        Players[0].point = 0;
+        Players[1].point = 0;
     }
 }
 

@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 public class MyButton : MonoBehaviour {
 
+    public bool buttonEnabled = true;
+
 	public string inputButton;
 
 	public Sprite imageDefault;
@@ -19,8 +21,12 @@ public class MyButton : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetButtonDown(inputButton)){
-			onPressed.Invoke();
-		}
+        if (buttonEnabled)
+        {
+            if (Input.GetButtonDown(inputButton))
+            {
+                onPressed.Invoke();
+            }
+        }
 	}
 }

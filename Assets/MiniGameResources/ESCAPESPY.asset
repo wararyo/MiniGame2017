@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d709dfeffdd3843e991f8dea584480e5, type: 3}
+  m_Name: ESCAPESPY
+  m_EditorClassIdentifier: 
+  name: ESCAPE SPY
+  path: MiniGames/ESCAPESPY/ESCAPESPY.exe
+  logo: {fileID: 21300000, guid: fc3771cbc92d2034d9153187330260d7, type: 3}
+  screenShot: {fileID: 21300000, guid: cdb5e682ffecc47fdac25cd70b349d93, type: 3}
+  ruleTabUi: {fileID: 1039814527882314, guid: a7c8ea1fbef3a434faf9c6ac5463fa4d, type: 2}
+  howToPlayTabUi: {fileID: 1041868458638556, guid: a38ed1aeeb8a97642afbdf2f3b700d2a,
+    type: 2}

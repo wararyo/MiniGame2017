@@ -13,8 +13,10 @@ public class ShuffleManager : MonoBehaviour
 	public PointView pointView2P;
 	public MiniGameCard miniGameCard;
 	public InstructionUI instruction;
+    public WinnerUI winnerUi;
 
 	public List<MiniGame> miniGames;
+    public List<bool> PlayedGames;
 
     int nextMiniGameID = 0;
 	MiniGame nextMiniGame;
@@ -25,8 +27,13 @@ public class ShuffleManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-		nextMiniGameID = UnityEngine.Random.Range(0, miniGames.Count);
-		nextMiniGame = miniGames [nextMiniGameID];
+        while (true)
+        {
+            nextMiniGameID = UnityEngine.Random.Range(0, miniGames.Count);
+            nextMiniGame = miniGames[nextMiniGameID];
+            if (Commander.PlayedMiniGames.Contains(nextMiniGame)) continue;
+            else break;
+        }
 
 		int gameCount = Commander.Players [0].point + Commander.Players [1].point + 1;
 		titleText.text = string.Format ("第{0}回戦", gameCount);
@@ -34,7 +41,7 @@ public class ShuffleManager : MonoBehaviour
 		miniGameCard.Initialize (nextMiniGame.screenShot, nextMiniGame.name);
 
 		pointView1P.Point = Commander.Players [0].point;
-		pointView1P.Point = Commander.Players [1].point;
+		pointView2P.Point = Commander.Players [1].point;
 
 		instruction.Initialize (nextMiniGame);
     }
@@ -47,7 +54,7 @@ public class ShuffleManager : MonoBehaviour
 
     public void ExecuteMiniGame()
     {
-        string FilePath = getPath() + Commander.Minigames[nextMiniGameID].path;
+        string FilePath = getPath() + nextMiniGame.path;
 
         System.Diagnostics.Process process = new System.Diagnostics.Process();
         process.StartInfo.FileName = FilePath;
@@ -94,6 +101,10 @@ public class ShuffleManager : MonoBehaviour
 			}
 		}
 		if (winner == 0) titleText.text = "勝敗情報が送信されずに終了しました";
+        else { Commander.PlayedMiniGames.Add(nextMiniGame); }
+        winnerUi.Winner = winner;
+
+        GetComponent<MyCueScenePlayer>().Invoke();
 
         if (Commander.Players[0].point >= Commander.VICTORY_COUNT)
         {//1Pの優勝
