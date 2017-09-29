@@ -13,6 +13,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attachedSceneGUID: 
   cueList:
+  - time: 0
+    gameObjectName: Manager
+    cueEventID: 6hg7fd040959g8c8vkfjj
+    parameter: True
+    paramObject: {fileID: 0}
+    UUID: 8f97c609-f105-4447-8d7c-6f5ac7126274
   - time: 1
     gameObjectName: Canvas/MCBaloon
     cueEventID: 4j56789gken765k789sd07jh78
@@ -35,6 +41,30 @@ MonoBehaviour:
     gameObjectName: Canvas/MCBaloon
     cueEventID: 4j56789gken765k789sd07jh78
     parameter: 
+    paramObject: {fileID: 0}
+    UUID: 
+  - time: 0
+    gameObjectName: Canvas/Title
+    cueEventID: 0fj776wr09sd7b985qew
+    parameter: False
+    paramObject: {fileID: 0}
+    UUID: 
+  - time: 0
+    gameObjectName: Manager
+    cueEventID: 6hg7fd040959g8c8vkfjj
+    parameter: False
+    paramObject: {fileID: 0}
+    UUID: 
+  - time: -1
+    gameObjectName: Canvas/Winner
+    cueEventID: t79ryhfrc98h0y9y7yts0e
+    parameter: 
+    paramObject: {fileID: 0}
+    UUID: 
+  - time: -1
+    gameObjectName: Canvas/MCBaloon
+    cueEventID: 4j56789gken765k789sd07jh78
+    parameter: "\u52DD\u3063\u305F\u30D7\u30EC\u30A4\u30E4\u30FC\u306B1\u70B9\u5165\u308A\u307E\u30FC\u3059\uFF01"
     paramObject: {fileID: 0}
     UUID: 
   Version: 1

@@ -15,14 +15,19 @@ public class InstructionUI : MonoBehaviour {
 			if (value == 0) {
 				ruleContent.SetActive (true);
 				howToPlayContent.SetActive (false);
+				currentTab.anchoredPosition = tab0.anchoredPosition;
 			} else if (value == 1) {
 				ruleContent.SetActive (false);
 				howToPlayContent.SetActive (true);
+				currentTab.anchoredPosition = tab1.anchoredPosition;
 			}
 		}
 	}
 
 	public Image logoImage;
+	public RectTransform currentTab;
+	public RectTransform tab0;
+	public RectTransform tab1;
 	GameObject ruleContent;
 	GameObject howToPlayContent;
 

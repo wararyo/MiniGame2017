@@ -45,7 +45,7 @@ public class ShuffleManager : MonoBehaviour
 
     }
 
-    void ExecuteMiniGame()
+    public void ExecuteMiniGame()
     {
         string FilePath = getPath() + Commander.Minigames[nextMiniGameID].path;
 
