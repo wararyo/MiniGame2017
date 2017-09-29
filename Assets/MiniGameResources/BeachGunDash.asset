@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d709dfeffdd3843e991f8dea584480e5, type: 3}
+  m_Name: BeachGunDash
+  m_EditorClassIdentifier: 
+  name: Beach Gun Dash
+  path: MiniGames/BeachGunDash/BeachGunDash.exe
+  logo: {fileID: 21300000, guid: 4474652f912404e668fb8b4b64e8bde5, type: 3}
+  screenShot: {fileID: 21300000, guid: 9f1cf99c2bea840b8b49754fd110afb9, type: 3}
+  ruleTabUi: {fileID: 1770839203410886, guid: f97f7b190fac64b58a7bd2972348dcc2, type: 2}
+  howToPlayTabUi: {fileID: 1554529313666052, guid: 5026675ee27c94d9dbaac8abac21e0de,
+    type: 2}

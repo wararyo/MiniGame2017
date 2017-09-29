@@ -32,6 +32,14 @@ namespace wararyo.EclairCueMaker
 
         protected virtual void OnCursorChanged(int before, int after) {; }
 
+		/// <summary>
+		/// Called before invoke next cue.
+		/// If return false, invoking will be canceled.
+		/// </summary>
+		protected virtual bool OnInvoking(){
+			return true;
+		}
+
         protected virtual void Start()
         {
 			if (playOnAwake)
@@ -60,11 +68,16 @@ namespace wararyo.EclairCueMaker
 
         public void Invoke()
         {
-			if (cueScene.cueList[cursor].gameObjectName != ""){
-                Cue.Invoke(cueScene.cueList[cursor]);
+			if (OnInvoking ()) {
+				if (cueScene.cueList [cursor].gameObjectName != "") {
+					Cue.Invoke (cueScene.cueList [cursor]);
+				}
+				time = 0;
+				if (cueScene.Count - 1 > Cursor)
+					Cursor++;
+				else if (loop)
+					Cursor = 0;
 			}
-            time = 0;
-            Cursor++;
         }
 
 		public void Play(){

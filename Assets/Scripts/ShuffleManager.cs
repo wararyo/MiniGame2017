@@ -4,48 +4,42 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System;
+using System.Collections;
 
 public class ShuffleManager : MonoBehaviour
 {
+    public Text titleText;
+	public PointView pointView1P;
+	public PointView pointView2P;
+	public MiniGameCard miniGameCard;
 
-    public Text nextMiniGameText;
+	public List<MiniGame> miniGames;
 
     int nextMiniGameID = 0;
+	MiniGame nextMiniGame;
 
     [NonSerialized]
     public int winner = 0;
 
-    bool isGameStartWaiting = false;
-
     // Use this for initialization
     void Start()
     {
-        nextMiniGameID = UnityEngine.Random.Range(0, Commander.Minigames.Length);
+		nextMiniGameID = UnityEngine.Random.Range(0, miniGames.Count);
+		nextMiniGame = miniGames [nextMiniGameID];
 
 		int gameCount = Commander.Players [0].point + Commander.Players [1].point + 1;
+		titleText.text = string.Format ("第{0}回戦", gameCount);
 
-		nextMiniGameText.text = string.Format ("第{0}回戦", gameCount);//"次のゲームは\n" + Commander.Minigames[nextMiniGameID].name + "\nAを押してスタート";
+		miniGameCard.Initialize (nextMiniGame.screenShot, nextMiniGame.name);
 
-        isGameStartWaiting = true;
-
-        Debug.Log("1P: " + Commander.Players[0].point + " 2P: " + Commander.Players[1].point);
-
+		pointView1P.Point = Commander.Players [0].point;
+		pointView1P.Point = Commander.Players [1].point;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(isGameStartWaiting && Input.GetButtonDown("Fire1"))
-        {
-            isGameStartWaiting = false;
-            StartCoroutine(coroutine());
-        }
-    }
 
-    IEnumerator coroutine()
-    {
-        yield return new WaitForSeconds(0.1f);
-        ExecuteMiniGame();
     }
 
     void ExecuteMiniGame()
@@ -87,18 +81,16 @@ public class ShuffleManager : MonoBehaviour
 			Debug.Log(stdout);
 			if (stdout.StartsWith("1"))//1Pの勝ち
 			{
-				nextMiniGameText.text = "1Pの勝ち！";
 				Commander.Players [0].point++;
 				winner = 1;
 			}
 			else if (stdout.StartsWith("2"))//2Pの勝ち
 			{
-				nextMiniGameText.text = "2Pの勝ち！";
 				Commander.Players [1].point++;
 				winner = 2;
 			}
 		}
-		if (winner == 0) nextMiniGameText.text = "勝敗情報が送信されずに終了しました";
+		if (winner == 0) titleText.text = "勝敗情報が送信されずに終了しました";
 
         if (Commander.Players[0].point >= Commander.VICTORY_COUNT)
         {//1Pの優勝

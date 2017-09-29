@@ -1,32 +1,14 @@
-﻿using System;
+﻿using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 using wararyo.EclairCueMaker;
+using System;
 
-public class CueEvent_MCBaloon : CueEventBase {
+public class CueEvent_ShowMiniGameCard : CueEventBase {
 
-	public Image baloon;
-	public Text text;
-	public Image nextIcon;
-
-	public bool isAnimating {
-		get {
-			return false;
-		}
-	}
-
-	bool isShowing{
-		set{
-			baloon.enabled = value;
-			text.enabled = value;
-			nextIcon.enabled = value;
-		}
-	}
+	public MiniGameCard card;
 
 	void Start () {
-		isShowing = false;
+		card.isVisible = false;
 	}
 
 	/// <summary>
@@ -36,7 +18,7 @@ public class CueEvent_MCBaloon : CueEventBase {
 	{
 		get
 		{
-			return "Show MCBaloon";
+			return "Show MiniGame Card";
 		}
 	}
 
@@ -50,7 +32,7 @@ public class CueEvent_MCBaloon : CueEventBase {
 	{
 		get
 		{
-			return "4j56789gken765k789sd07jh78";
+			return "96743udmg95y3iqog9y9";
 		}
 	}
 
@@ -67,24 +49,13 @@ public class CueEvent_MCBaloon : CueEventBase {
 	{
 		get
 		{
-			return typeof(string);
+			return typeof(bool);
 		}
 	}
 
 
 	public override void Cue(object param)
 	{
-		//ここに任意の処理を記述
-		if (string.IsNullOrEmpty ((string)param)) {
-			isShowing = false;
-		} else {
-			isShowing = true;
-			text.text = ((string)param).Replace("¥n","\n");
-		}
+		card.isVisible = (bool)param;
 	}
-
-	public void Skip(){
-
-	}
-
 }

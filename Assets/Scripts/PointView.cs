@@ -8,8 +8,8 @@ public class PointView : MonoBehaviour {
 	public Image point1;
 	public Image point2;
 
-	public Texture pointTexture;
-	public Texture pointEmptyTexture;
+	public Sprite pointTexture;
+	public Sprite pointEmptyTexture;
 
 	private int point;
 	public int Point{
@@ -18,8 +18,8 @@ public class PointView : MonoBehaviour {
 		}
 		set{
 			point = value;
-			point1.material.mainTexture = (point >= 1) ? pointTexture : pointEmptyTexture;
-			point2.material.mainTexture = (point >= 2) ? pointTexture : pointEmptyTexture;
+			point1.sprite = (point >= 1) ? pointTexture : pointEmptyTexture;
+			point2.sprite = (point >= 2) ? pointTexture : pointEmptyTexture;
 		}
 	}
 

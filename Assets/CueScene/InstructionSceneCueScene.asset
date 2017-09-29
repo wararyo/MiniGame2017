@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04dd2b884f26a45868bcbd5da8c241b6, type: 3}
+  m_Name: InstructionSceneCueScene
+  m_EditorClassIdentifier: 
+  attachedSceneGUID: 
+  cueList:
+  - time: 0.5
+    gameObjectName: Canvas/MCBaloon
+    cueEventID: 4j56789gken765k789sd07jh78
+    parameter: "\u3053\u3093\u306B\u3061\u306F\uFF01"
+    paramObject: {fileID: 0}
+    UUID: 
+  - time: -1
+    gameObjectName: Canvas/MCBaloon
+    cueEventID: 4j56789gken765k789sd07jh78
+    parameter: "\u4ECA\u56DE\u304A\u4E8C\u4EBA\u306B\u306F\u3001\u30DF\u30CB\u30B2\u30FC\u30E0\u3067\u30D0\u30C8\u30EB\u3092\u3057\u3066\u3082\u3089\u3044\u307E\u3059\u3002"
+    paramObject: {fileID: 0}
+    UUID: 
+  - time: -1
+    gameObjectName: Canvas/MCBaloon
+    cueEventID: 4j56789gken765k789sd07jh78
+    parameter: "\u30DF\u30CB\u30B2\u30FC\u30E0\u306F\u3044\u304F\u3064\u3082\u7528\u610F\u3055\u308C\u3066\u304A\u308A\u3001\u30E9\u30F3\u30C0\u30E0\u3067\u9078\u3070\u308C\u307E\u3059\u3002"
+    paramObject: {fileID: 0}
+    UUID: 917e8947-b1d2-470c-9e58-58d21ce3b519
+  - time: -1
+    gameObjectName: Canvas/MCBaloon
+    cueEventID: 4j56789gken765k789sd07jh78
+    parameter: "\u5148\u306B2\u56DE\u52DD\u3063\u305F\u307B\u3046\u304C\u512A\u52DD\u3068\u306A\u308A\u307E\u3059\u3002\xA5n\u3088\u3063\u3066\u6700\u59273\u3064\u306E\u30DF\u30CB\u30B2\u30FC\u30E0\u3067\u904A\u3076\u3053\u3068\u304C\u3067\u304D\u307E\u3059\u3002"
+    paramObject: {fileID: 0}
+    UUID: d24a4d45-4b7f-455f-895e-e775a22cd91c
+  - time: -1
+    gameObjectName: Canvas/MCBaloon
+    cueEventID: 4j56789gken765k789sd07jh78
+    parameter: "\u305D\u308C\u3067\u306F\u65E9\u901F\u3001\xA5n1\u3064\u3081\u306E\u30DF\u30CB\u30B2\u30FC\u30E0\u306B\u3044\u3063\u3066\u307F\u307E\u3057\u3087\u3046\uFF01"
+    paramObject: {fileID: 0}
+    UUID: fb8dbbff-dcfe-4d97-a83d-0cf36e61e3be
+  - time: -1
+    gameObjectName: Manager
+    cueEventID: s69set9ltegw5uw59jses
+    parameter: Shuffle
+    paramObject: {fileID: 0}
+    UUID: fb8dbbff-dcfe-4d97-a83d-0cf36e61e3be
+  Version: 1
