@@ -4,8 +4,6 @@ using UnityEngine;
 
 public static class Commander {
 
-    public static MiniGameLegacy[] Minigames;
-
     public static Player[] Players;
 
     public static List<MiniGame> PlayedMiniGames;
@@ -19,13 +17,6 @@ public static class Commander {
             new Player("じろう",2),
         };
 
-        Minigames = new MiniGameLegacy[]{
-			new MiniGameLegacy("Love Triangle(終了しない不具合あり Alt+F4で終了)","MiniGames/LoveTriangle/LoveTriangle.exe"),
-			new MiniGameLegacy("ネタざんまい","MiniGames/NetaZanmai/NetaZanmai.exe"),
-			new MiniGameLegacy("ESCAPE SPY","MiniGames/ESCAPESPY/ESCAPESPY.exe"),
-			new MiniGameLegacy("Beach Gun Dash","MiniGames/BeachGunDash/BeachGunDash.exe"),
-        };
-
         PlayedMiniGames = new List<MiniGame>();
 
     }
@@ -35,19 +26,6 @@ public static class Commander {
         PlayedMiniGames.Clear();
         Players[0].point = 0;
         Players[1].point = 0;
-    }
-}
-
-[System.Obsolete()]
-public class MiniGameLegacy
-{
-    public string name;
-    public string path;
-
-    public MiniGameLegacy(string name,string path)
-    {
-        this.name = name;
-        this.path = path;
     }
 }
 
