@@ -25,7 +25,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1174805648789830
 GameObject:
   m_ObjectHideFlags: 0
@@ -119,7 +119,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ru-ruwonyuuryokusitene
+  m_Text: "\u969C\u5BB3\u7269\u3092\u3088\u3051\u306A\u304C\u3089\u30B4\u30FC\u30EB\u3092\u76EE\u6307\u3059\u30B2\u30FC\u30E0\u3067\u3059\u3002\r\n\u969C\u5BB3\u7269\u306B\u89E6\u308C\u3066\u3057\u307E\u3046\u3068\u3001\u30B9\u30D4\u30FC\u30C9\u304C\u843D\u3061\u305F\u308A\u3001\u52D5\u304D\u304C\u6B62\u307E\u3063\u305F\u308A\u3057\u3066\u3057\u307E\u3044\u307E\u3059\u3002\r\n\u3046\u307E\u304F\u3088\u3051\u306A\u304C\u3089\u76F8\u624B\u3088\u308A\u3082\u65E9\u304F\u30B4\u30FC\u30EB\u3057\u307E\u3057\u3087\u3046\u3002"
 --- !u!222 &222180973564888696
 CanvasRenderer:
   m_ObjectHideFlags: 1
