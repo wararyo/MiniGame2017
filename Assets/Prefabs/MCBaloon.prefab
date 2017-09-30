@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 222246927832110540}
   - component: {fileID: 114466013639805232}
   - component: {fileID: 114950774883033068}
+  - component: {fileID: 95280996863598378}
   m_Layer: 0
   m_Name: MCBaloon
   m_TagString: Untagged
@@ -64,6 +65,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &95280996863598378
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1672793304356354}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 15f72c18f341d66458ec326c77ac1c49, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!95 &95813602349600632
 Animator:
   serializedVersion: 3
@@ -182,6 +200,8 @@ MonoBehaviour:
   baloon: {fileID: 114466013639805232}
   text: {fileID: 114252228154914420}
   nextIcon: {fileID: 114297809695340634}
+  anim: {fileID: 95280996863598378}
+  content: 
 --- !u!222 &222246927832110540
 CanvasRenderer:
   m_ObjectHideFlags: 1

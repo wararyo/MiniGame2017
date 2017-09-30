@@ -1,14 +1,16 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
-using wararyo.EclairCueMaker;
 using System;
+using wararyo.EclairCueMaker;
 
-public class CueEvent_ShowMiniGameCard : CueEventBase {
+public class CueEvent_PlayParticle : CueEventBase {
 
-	public MiniGameCard card;
+    public float duration;
 
-	void Start () {
-		card.isVisible = false;
+	// Use this for initialization
+	void Awake () {
+        GetComponent<ParticleSystem>().Pause();
 	}
 
 	/// <summary>
@@ -18,7 +20,7 @@ public class CueEvent_ShowMiniGameCard : CueEventBase {
 	{
 		get
 		{
-			return "Show MiniGame Card";
+			return "PlayParticle";
 		}
 	}
 
@@ -32,7 +34,7 @@ public class CueEvent_ShowMiniGameCard : CueEventBase {
 	{
 		get
 		{
-			return "96743udmg95y3iqog9y9";
+			return "986sf789juykj6h87khfuy";
 		}
 	}
 
@@ -43,20 +45,26 @@ public class CueEvent_ShowMiniGameCard : CueEventBase {
 	/// string
 	/// int
 	/// float
-	/// GameObject
+	/// GameObjectなどのUnityEngine.Object継承型
 	/// </summary>
 	public override Type ParamType
 	{
 		get
 		{
-			return typeof(bool);
+			return typeof(void);
 		}
 	}
 
 
 	public override void Cue(object param)
 	{
-		card.isVisible = (bool)param;
-        GetComponent<Animator>().SetTrigger("Trigger");
+        StartCoroutine(coroutine());
 	}
+
+    IEnumerator coroutine()
+    {
+        GetComponent<ParticleSystem>().Play();
+        yield return new WaitForSecondsRealtime(duration);
+        GetComponent<ParticleSystem>().Pause();
+    }
 }

@@ -56,6 +56,6 @@ public class CueEvent_LoadScene : CueEventBase {
 
     public override void Cue(object param)
     {
-		SceneManager.LoadSceneAsync ((string)param);
+		SceneNavigator.Instance.Change ((string)param);
     }
 }

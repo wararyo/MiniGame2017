@@ -15,7 +15,7 @@ public class InputUtil : MonoBehaviour{
 	static float threshold = 0.1f;
 
 	public static int GetHorizontalDown(){
-		if (previousHorizontal == 0) {
+		if (Mathf.Abs(previousHorizontal) < threshold) {
 			if (nowHorizontal > threshold)
 				return 1;
 			else if (nowHorizontal < -threshold)
@@ -25,7 +25,7 @@ public class InputUtil : MonoBehaviour{
 	}
 
 	public static int GetVerticalDown(){
-		if (previousVertical == 0) {
+		if (Mathf.Abs(previousVertical) < threshold) {
 			if (nowVertical > threshold)
 				return 1;
 			else if (nowVertical < -threshold)

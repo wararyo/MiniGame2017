@@ -25,30 +25,30 @@ MonoBehaviour:
     parameter: "\u3055\u3066\u3001\u3053\u308C\u304B\u3089\u904A\u3076\u30B2\u30FC\u30E0\u306F\u2026\xA5n\u3053\u308C\u3060\u30FC\u30FC\u30FC\uFF01\uFF01\uFF01"
     paramObject: {fileID: 0}
     UUID: 
-  - time: 1
+  - time: -1
     gameObjectName: Canvas/MiniGameCard
     cueEventID: 96743udmg95y3iqog9y9
     parameter: True
     paramObject: {fileID: 11400000, guid: b51b9a659904f46d6bc4b50da8f0696e, type: 2}
     UUID: 
+  - time: 0
+    gameObjectName: Particle System
+    cueEventID: 986sf789juykj6h87khfuy
+    parameter: 
+    paramObject: {fileID: 11400000, guid: b51b9a659904f46d6bc4b50da8f0696e, type: 2}
+    UUID: 4606b875-99ac-448c-8c40-64c8018846ba
   - time: -1
     gameObjectName: Canvas/Instruction
     cueEventID: 656f78s8f9d0n97d
     parameter: In
     paramObject: {fileID: 0}
     UUID: 
-  - time: 0
+  - time: 0.45
     gameObjectName: Canvas/MCBaloon
     cueEventID: 4j56789gken765k789sd07jh78
     parameter: 
     paramObject: {fileID: 0}
-    UUID: 
-  - time: 0
-    gameObjectName: Canvas/Title
-    cueEventID: 0fj776wr09sd7b985qew
-    parameter: False
-    paramObject: {fileID: 0}
-    UUID: 
+    UUID: 47459042-5fce-4072-a37b-3d55d6d1bed7
   - time: 0
     gameObjectName: Canvas/Instruction/NextBtn
     cueEventID: 6hgtw098woishtw609

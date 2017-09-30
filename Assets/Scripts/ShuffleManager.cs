@@ -121,12 +121,12 @@ public class ShuffleManager : MonoBehaviour
     private IEnumerator GotoNextGame()
     {
         yield return new WaitForSeconds(4);
-        SceneManager.LoadSceneAsync("Shuffle");
+        SceneNavigator.Instance.Change("Shuffle");
     }
 
 	private IEnumerator GotoVictoryScene(){
 		yield return new WaitForSeconds (4);
-		SceneManager.LoadSceneAsync ("Victory");
+        SceneNavigator.Instance.Change("Victory");
 	}
 
     public string getPath()

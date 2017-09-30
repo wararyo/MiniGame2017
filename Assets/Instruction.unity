@@ -392,6 +392,7 @@ GameObject:
   - component: {fileID: 1821223166}
   - component: {fileID: 1821223168}
   - component: {fileID: 1821223167}
+  - component: {fileID: 1821223169}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -438,7 +439,18 @@ MonoBehaviour:
   playOnAwake: 1
   loop: 0
   MCBaloon: {fileID: 912158085}
-  controllable: 1
+  controllable: 0
+--- !u!114 &1821223169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1821223165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d51d91487b71e4609a1fab80af379ab5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1871848158
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,10 +10,18 @@ public class CueEvent_MCBaloon : CueEventBase {
 	public Image baloon;
 	public Text text;
 	public Image nextIcon;
+    public Animator anim;
 
+    public string content;
+
+    public Coroutine textPoppingCoroutine;
+
+    float textPopInterval = 0.05f;
+
+    bool _isAnimating = false;
 	public bool isAnimating {
 		get {
-			return false;
+			return _isAnimating;
 		}
 	}
 
@@ -22,7 +30,11 @@ public class CueEvent_MCBaloon : CueEventBase {
 			baloon.enabled = value;
 			text.enabled = value;
 			nextIcon.enabled = value;
-		}
+            if (value)
+            {
+                nextIcon.GetComponent<Animator>().SetBool("Visible", false);
+            }
+        }
 	}
 
 	void Start () {
@@ -79,12 +91,33 @@ public class CueEvent_MCBaloon : CueEventBase {
 			isShowing = false;
 		} else {
 			isShowing = true;
-			text.text = ((string)param).Replace("¥n","\n");
+			content = ((string)param).Replace("¥n","\n");
+            textPoppingCoroutine = StartCoroutine(textPoppingWork());
+            anim.SetTrigger("Trigger");
+            _isAnimating = true;
 		}
 	}
 
-	public void Skip(){
+    IEnumerator textPoppingWork()
+    {
+        for (int i = 0; i <= content.Length; i++)
+        {
+            text.text = content.Substring(0, i);
+            yield return new WaitForSeconds(textPopInterval);
+        }
+        OnEndAnimation();
+    }
 
+	public void Skip(){
+        StopCoroutine(textPoppingCoroutine);
+        text.text = content;
+        OnEndAnimation();
 	}
+
+    void OnEndAnimation()
+    {
+        _isAnimating = false;
+        nextIcon.GetComponent<Animator>().SetBool("Visible", true);
+    }
 
 }
