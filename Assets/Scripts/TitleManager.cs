@@ -14,6 +14,7 @@ public class TitleManager : MonoBehaviour {
 	}
 
 	public void GotoNextScene(){
+        GetComponent<CriAtomSource>().Stop();
 		SceneNavigator.Instance.Change ("Instruction",1);
 	}
 }

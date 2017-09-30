@@ -686,31 +686,6 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224657616376680746, guid: 5026675ee27c94d9dbaac8abac21e0de,
     type: 2}
   m_PrefabInternal: {fileID: 1706546974}
---- !u!1 &370800571 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1672793304356354, guid: 80273f17d7c344ce79925b1b1df29050,
-    type: 2}
-  m_PrefabInternal: {fileID: 2034926874}
---- !u!114 &370800572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 370800571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1e631c3b9947b54c823c6853a05529c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playOnStart: 0
-  _cueName: talk
-  _cueSheet: CueSheet_0
-  _use3dPositioning: 1
-  _loop: 0
-  _volume: 1
-  _pitch: 0
-  _androidUseLowLatencyVoicePool: 0
-  need_to_player_update_all: 1
 --- !u!224 &507470383 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224928052734485134, guid: 82fd889d08394c6499fe36f5276ced0d,
@@ -6709,19 +6684,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1672793304356354, guid: 80273f17d7c344ce79925b1b1df29050, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1186810675695396, guid: 80273f17d7c344ce79925b1b1df29050, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114950774883033068, guid: 80273f17d7c344ce79925b1b1df29050,
-        type: 2}
-      propertyPath: audioSource
-      value: 
-      objectReference: {fileID: 370800572}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 80273f17d7c344ce79925b1b1df29050, type: 2}
   m_IsPrefabParent: 0
