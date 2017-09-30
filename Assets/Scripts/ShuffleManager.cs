@@ -114,6 +114,10 @@ public class ShuffleManager : MonoBehaviour
 				Commander.Players [1].point++;
 				winner = 2;
 			}
+            else if (stdout.ToLower().StartsWith("esc"))
+            {
+                ResetWatcher.Instance.ResetGame();
+            }
 		}
 		if (winner == 0) titleText.text = "勝敗情報が送信されずに終了しました";
         else { Commander.PlayedMiniGames.Add(nextMiniGame); }

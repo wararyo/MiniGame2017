@@ -6,6 +6,7 @@ public class TitleManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        Commander.Initialize();
 	}
 	
 	// Update is called once per frame
