@@ -91,4 +91,10 @@ MonoBehaviour:
     parameter: "\u52DD\u3063\u305F\u30D7\u30EC\u30A4\u30E4\u30FC\u306B1\u70B9\u5165\u308A\u307E\u30FC\u3059\uFF01"
     paramObject: {fileID: 0}
     UUID: 
+  - time: -1
+    gameObjectName: Canvas/MCBaloon
+    cueEventID: 4j56789gken765k789sd07jh78
+    parameter: "\u52DD\u3063\u305F\u30D7\u30EC\u30A4\u30E4\u30FC\u306B1\u70B9\u5165\u308A\u307E\u30FC\u3059\uFF01"
+    paramObject: {fileID: 0}
+    UUID: a2b9a5ac-00c3-49b3-bda9-41e20b46d1fb
   Version: 1

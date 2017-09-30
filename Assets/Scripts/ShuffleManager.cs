@@ -14,6 +14,8 @@ public class ShuffleManager : MonoBehaviour
 	public MiniGameCard miniGameCard;
 	public InstructionUI instruction;
     public WinnerUI winnerUi;
+    public CriAtomSource audioSource;
+    public GameObject anten;
 
 	public List<MiniGame> miniGames;
     public List<bool> PlayedGames;
@@ -52,7 +54,12 @@ public class ShuffleManager : MonoBehaviour
 
     }
 
-    public void ExecuteMiniGame()
+    public void StartMiniGame()
+    {
+        StartCoroutine(ExecuteMiniGameWork());
+    }
+
+    void ExecuteMiniGame()
     {
         string FilePath = getPath() + nextMiniGame.path;
 
@@ -75,6 +82,14 @@ public class ShuffleManager : MonoBehaviour
         //process.BeginOutputReadLine();
         process.WaitForExit();
 		OnEndMiniGame(process.StandardOutput.ReadToEnd());
+    }
+
+    IEnumerator ExecuteMiniGameWork()
+    {
+        anten.GetComponent<CueEvent_UIInAndOut>().Cue(null);
+        audioSource.Stop();
+        yield return new WaitForSeconds(2);
+        ExecuteMiniGame();
     }
 
     // プロセス終了時.
