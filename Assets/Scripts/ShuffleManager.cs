@@ -16,6 +16,7 @@ public class ShuffleManager : MonoBehaviour
     public WinnerUI winnerUi;
     public CriAtomSource audioSource;
     public GameObject anten;
+    public CueEvent_MCBaloon baloon;
 
 	public List<MiniGame> miniGames;
     public List<bool> PlayedGames;
@@ -39,6 +40,7 @@ public class ShuffleManager : MonoBehaviour
 
 		int gameCount = Commander.Players [0].point + Commander.Players [1].point + 1;
 		titleText.text = string.Format ("第{0}回戦", gameCount);
+        baloon.replaceList.Add("Round", gameCount.ToString());
 
 		miniGameCard.Initialize (nextMiniGame.screenShot, nextMiniGame.name);
 
@@ -107,13 +109,15 @@ public class ShuffleManager : MonoBehaviour
 			if (stdout.StartsWith("1"))//1Pの勝ち
 			{
 				Commander.Players [0].point++;
+                baloon.replaceList.Add("Winner", "1P");
 				winner = 1;
 			}
 			else if (stdout.StartsWith("2"))//2Pの勝ち
 			{
 				Commander.Players [1].point++;
+                baloon.replaceList.Add("Winner", "2P");
 				winner = 2;
-			}
+            }
             else if (stdout.ToLower().StartsWith("esc"))
             {
                 ResetWatcher.Instance.ResetGame();

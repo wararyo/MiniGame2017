@@ -963,6 +963,7 @@ MonoBehaviour:
   winnerUi: {fileID: 1189872240}
   audioSource: {fileID: 1973709813}
   anten: {fileID: 2023705795}
+  baloon: {fileID: 1549142848}
   miniGames:
   - {fileID: 11400000, guid: b51b9a659904f46d6bc4b50da8f0696e, type: 2}
   - {fileID: 11400000, guid: 65da6963b31a24b06bb36e20177c8555, type: 2}
@@ -995,7 +996,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cueScene: {fileID: 11400000, guid: 34245550ffe7f4f7eb40a745878b3057, type: 2}
   playOnAwake: 1
-  loop: 1
+  loop: 0
   MCBaloon: {fileID: 1549142848}
   controllable: 1
 --- !u!114 &1020723373
@@ -1285,7 +1286,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -496716434
+  randomSeed: -1869143802
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -6312,7 +6313,7 @@ MonoBehaviour:
   _cueName: rule
   _cueSheet: CueSheet_0
   _use3dPositioning: 1
-  _loop: 0
+  _loop: 1
   _volume: 1
   _pitch: 0
   _androidUseLowLatencyVoicePool: 0

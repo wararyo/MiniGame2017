@@ -40,7 +40,7 @@ public class CueEvent_MCBaloon : CueEventBase {
         }
 	}
 
-	void Start () {
+	void Awake () {
 		isShowing = false;
         replaceList = new Dictionary<string, string>();
 	}
