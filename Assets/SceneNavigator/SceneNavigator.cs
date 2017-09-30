@@ -43,7 +43,7 @@ public class SceneNavigator : SingletonMonoBehaviour<SceneNavigator> {
   private CanvasFader _fader = null;
 
   //フェード時間
-  public const float FADE_TIME = 0.3f;
+  public const float FADE_TIME = 0.8f;
   private float _fadeTime = FADE_TIME;
 
   //=================================================================================

@@ -11,6 +11,7 @@ public class CueEvent_MCBaloon : CueEventBase {
 	public Text text;
 	public Image nextIcon;
     public Animator anim;
+    public CriAtomSource audioSource;
 
     public string content;
 
@@ -103,6 +104,7 @@ public class CueEvent_MCBaloon : CueEventBase {
         for (int i = 0; i <= content.Length; i++)
         {
             text.text = content.Substring(0, i);
+            audioSource.Play();
             yield return new WaitForSeconds(textPopInterval);
         }
         OnEndAnimation();
