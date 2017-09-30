@@ -39,10 +39,10 @@ public class InstructionUI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		int down = InputUtil.GetHorizontalDown ();
-		if (down < 0) {//left
+		if (down < 0 || Input.GetButtonDown("5")) {//left
 			Tab = 0;
 		}
-		if (down > 0) {//right
+		else if (down > 0 || Input.GetButtonDown("6")) {//right
 			Tab = 1;
 		}
 	}

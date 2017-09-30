@@ -23,7 +23,7 @@ public class MyCueScenePlayer : CueScenePlayer {
 
 	protected override void Update ()
 	{
-		if (Input.GetButtonDown ("Fire1") && controllable)
+		if (Input.GetButtonDown ("4") && controllable)
 			Invoke ();
 		
 		base.Update ();
