@@ -68,6 +68,12 @@ MonoBehaviour:
     paramObject: {fileID: 0}
     UUID: a7021ee9-f753-43cf-b342-fb6a2f4b0731
   - time: 0
+    gameObjectName: rule(CriAtomSource)
+    cueEventID: gn7e5t4a09a44099awuyn0
+    parameter: rule
+    paramObject: {fileID: 0}
+    UUID: 0fbc1e70-d936-4dfd-8b68-38e70117b125
+  - time: 0
     gameObjectName: Canvas/Instruction
     cueEventID: 656f78s8f9d0n97d
     parameter: Default

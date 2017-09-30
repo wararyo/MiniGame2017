@@ -57,6 +57,12 @@ MonoBehaviour:
     UUID: fb8dbbff-dcfe-4d97-a83d-0cf36e61e3be
   - time: -1
     gameObjectName: Manager
+    cueEventID: 6g08a0at4igkjaui33
+    parameter: 
+    paramObject: {fileID: 0}
+    UUID: b189b5a2-d4d3-4dd3-b578-b1394a7300e0
+  - time: 0
+    gameObjectName: Manager
     cueEventID: s69set9ltegw5uw59jses
     parameter: Shuffle
     paramObject: {fileID: 0}
