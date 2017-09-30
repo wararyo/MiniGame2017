@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04dd2b884f26a45868bcbd5da8c241b6, type: 3}
+  m_Name: VictoryCueScene
+  m_EditorClassIdentifier: 
+  attachedSceneGUID: 
+  cueList:
+  - time: 1
+    gameObjectName: Canvas/MCBaloon
+    cueEventID: 4j56789gken765k789sd07jh78
+    parameter: "\u304A\u3084\uFF1F{Victory}\u306E\u5F97\u70B9\u304C2\u70B9\u306B\u306A\u3063\u305F\u306E\u3067\u2026"
+    paramObject: {fileID: 0}
+    UUID: 
+  - time: -1
+    gameObjectName: Canvas/MCBaloon
+    cueEventID: 4j56789gken765k789sd07jh78
+    parameter: "\u512A\u52DD\u306F{Victory}\u3067\u30FC\u30FC\u3059\uFF01\uFF01"
+    paramObject: {fileID: 0}
+    UUID: e942e1a3-f674-4a60-a941-e2e40e42e512
+  - time: 0
+    gameObjectName: Manager
+    cueEventID: 6hg7fd040959g8c8vkfjj
+    parameter: False
+    paramObject: {fileID: 0}
+    UUID: a9629425-abe0-496a-995e-ce6cbf037199
+  - time: 0
+    gameObjectName: Manager
+    cueEventID: gn7e5t4a09a44099awuyn0
+    parameter: win
+    paramObject: {fileID: 0}
+    UUID: 67a8ced1-ad93-47b7-9dcf-09b1e30d14d1
+  - time: 0
+    gameObjectName: Canvas/Winner
+    cueEventID: t79ryhfrc98h0y9y7yts0e
+    parameter: 
+    paramObject: {fileID: 0}
+    UUID: f8329603-6145-4969-aa37-464eeb1b04b5
+  - time: 4
+    gameObjectName: Manager
+    cueEventID: 6hg7fd040959g8c8vkfjj
+    parameter: True
+    paramObject: {fileID: 0}
+    UUID: a41bf3a5-82b7-4c9b-bdef-888f68f5099e
+  - time: 0
+    gameObjectName: Canvas/MCBaloon
+    cueEventID: 4j56789gken765k789sd07jh78
+    parameter: "{Victory}\u306E\u65B9\u3001\u304A\u3081\u3067\u3068\u3046\u3054\u3056\u3044\u307E\u3059\uFF01\uFF01"
+    paramObject: {fileID: 0}
+    UUID: 55adbc0a-f7a0-46b4-a864-444c471d8cc7
+  - time: -1
+    gameObjectName: Canvas/MCBaloon
+    cueEventID: 4j56789gken765k789sd07jh78
+    parameter: "Qpic \xD7 impression! \u30DF\u30CB\u30B2\u30FC\u30E02017\u3001\u4EE5\u4E0A\u3067\u304A\u308F\u308A\u3068\u306A\u308A\u307E\u3059\u3002"
+    paramObject: {fileID: 0}
+    UUID: 9c88765d-d023-4210-b94b-8b263fb669ab
+  - time: -1
+    gameObjectName: Manager
+    cueEventID: 6g08a0at4igkjaui33
+    parameter: 
+    paramObject: {fileID: 0}
+    UUID: 114a1dcb-ded6-4982-96d5-7807e012b363
+  - time: 0.5
+    gameObjectName: Manager
+    cueEventID: gn7e5t4a09a44099awuyn0
+    parameter: credit
+    paramObject: {fileID: 0}
+    UUID: e4be05b7-47f4-4347-9914-f102f49a9cc1
+  - time: 0
+    gameObjectName: Manager
+    cueEventID: 6hg7fd040959g8c8vkfjj
+    parameter: False
+    paramObject: {fileID: 0}
+    UUID: 5c3042b3-004f-46e3-926c-05a446549824
+  - time: 0
+    gameObjectName: Canvas/MCBaloon
+    cueEventID: 4j56789gken765k789sd07jh78
+    parameter: "\u305D\u308C\u3067\u306F\u3001\u307E\u305F\u306D\u30FC\u30FC\u30FC\uFF01\uFF01\xA5n\u5F8C\u308D\u306E\u4EBA\u306B\u4EE3\u308F\u3063\u3066\u306D\uFF01\uFF01"
+    paramObject: {fileID: 0}
+    UUID: cc1a781d-626d-4b8c-8999-677974096be9
+  - time: 9
+    gameObjectName: Manager
+    cueEventID: s69set9ltegw5uw59jses
+    parameter: Title
+    paramObject: {fileID: 0}
+    UUID: 5c3042b3-004f-46e3-926c-05a446549824
+  Version: 1

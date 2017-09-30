@@ -13,6 +13,8 @@ public class CueEvent_MCBaloon : CueEventBase {
     public Animator anim;
     public CriAtomSource audioSource;
 
+    public Dictionary<string, string> replaceList;
+
     public string content;
 
     public Coroutine textPoppingCoroutine;
@@ -40,6 +42,7 @@ public class CueEvent_MCBaloon : CueEventBase {
 
 	void Start () {
 		isShowing = false;
+        replaceList = new Dictionary<string, string>();
 	}
 
 	/// <summary>
@@ -93,6 +96,10 @@ public class CueEvent_MCBaloon : CueEventBase {
 		} else {
 			isShowing = true;
 			content = ((string)param).Replace("¥n","\n");
+            foreach(var item in replaceList)
+            {
+                content = content.Replace("{" + item.Key + "}", item.Value);
+            }
             textPoppingCoroutine = StartCoroutine(textPoppingWork());
             anim.SetTrigger("Trigger");
             _isAnimating = true;
