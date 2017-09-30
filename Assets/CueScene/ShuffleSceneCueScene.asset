@@ -68,18 +68,24 @@ MonoBehaviour:
     paramObject: {fileID: 0}
     UUID: a7021ee9-f753-43cf-b342-fb6a2f4b0731
   - time: 0
-    gameObjectName: rule(CriAtomSource)
-    cueEventID: gn7e5t4a09a44099awuyn0
-    parameter: rule
-    paramObject: {fileID: 0}
-    UUID: 0fbc1e70-d936-4dfd-8b68-38e70117b125
-  - time: 0
     gameObjectName: Canvas/Instruction
     cueEventID: 656f78s8f9d0n97d
     parameter: Default
     paramObject: {fileID: 0}
     UUID: 025f313b-5bce-467a-8fd3-47b4b4a530ae
   - time: 0
+    gameObjectName: Canvas/Anten
+    cueEventID: t79ryhfrc98h0y9y7yts0e
+    parameter: 
+    paramObject: {fileID: 0}
+    UUID: c4d194d4-3d89-450c-9ed2-fa49150778d6
+  - time: 0.5
+    gameObjectName: rule(CriAtomSource)
+    cueEventID: gn7e5t4a09a44099awuyn0
+    parameter: rule
+    paramObject: {fileID: 0}
+    UUID: 0fbc1e70-d936-4dfd-8b68-38e70117b125
+  - time: 1
     gameObjectName: Canvas/Winner
     cueEventID: t79ryhfrc98h0y9y7yts0e
     parameter: 
@@ -91,10 +97,4 @@ MonoBehaviour:
     parameter: "\u52DD\u3063\u305F\u30D7\u30EC\u30A4\u30E4\u30FC\u306B1\u70B9\u5165\u308A\u307E\u30FC\u3059\uFF01"
     paramObject: {fileID: 0}
     UUID: 
-  - time: -1
-    gameObjectName: Canvas/MCBaloon
-    cueEventID: 4j56789gken765k789sd07jh78
-    parameter: "\u52DD\u3063\u305F\u30D7\u30EC\u30A4\u30E4\u30FC\u306B1\u70B9\u5165\u308A\u307E\u30FC\u3059\uFF01"
-    paramObject: {fileID: 0}
-    UUID: a2b9a5ac-00c3-49b3-bda9-41e20b46d1fb
   Version: 1

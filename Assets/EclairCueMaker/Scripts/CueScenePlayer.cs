@@ -73,10 +73,7 @@ namespace wararyo.EclairCueMaker
 					Cue.Invoke (cueScene.cueList [cursor]);
 				}
 				time = 0;
-				if (cueScene.Count - 1 > Cursor)
-					Cursor++;
-				else if (loop)
-					Cursor = 0;
+			    Cursor++;
 			}
         }
 
