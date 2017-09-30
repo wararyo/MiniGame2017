@@ -995,7 +995,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cueScene: {fileID: 11400000, guid: 34245550ffe7f4f7eb40a745878b3057, type: 2}
   playOnAwake: 1
-  loop: 0
+  loop: 1
   MCBaloon: {fileID: 1549142848}
   controllable: 1
 --- !u!114 &1020723373
@@ -5613,6 +5613,10 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1323281074347368, guid: 908664a416e788c4d88a6506791da295, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 908664a416e788c4d88a6506791da295, type: 2}
