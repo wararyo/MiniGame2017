@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attachedSceneGUID: 
   cueList:
-  - time: 3
+  - time: 1
     gameObjectName: Manager
     cueEventID: 6hg7fd040959g8c8vkfjj
     parameter: True

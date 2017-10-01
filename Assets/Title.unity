@@ -4446,7 +4446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playOnStart: 1
-  _cueName: rule
+  _cueName: title
   _cueSheet: CueSheet_0
   _use3dPositioning: 1
   _loop: 1
