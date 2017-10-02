@@ -13,8 +13,8 @@ public static class Commander {
     static Commander()
     {
         Players = new Player[]{
-            new Player("いちたろう",1),
-            new Player("じろう",2),
+            new Player("プレイヤー1",2),
+            new Player("プレイヤー2",3),
         };
 
         PlayedMiniGames = new List<MiniGame>();

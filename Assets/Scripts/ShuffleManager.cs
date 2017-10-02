@@ -192,11 +192,13 @@ public class ShuffleManager : MonoBehaviour
     private IEnumerator GotoNextGame()
     {
         yield return new WaitForSeconds(6);
+        audioSource.Stop();
         SceneNavigator.Instance.Change("Shuffle");
     }
 
 	private IEnumerator GotoVictoryScene(){
 		yield return new WaitForSeconds (6);
+        audioSource.Stop();
         SceneNavigator.Instance.Change("Victory");
 	}
 
