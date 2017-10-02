@@ -176,8 +176,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\u30C7\u30A3\u30EC\u30AF\u30BF\u30FC: \u308F\u3089\u3073\r\n\u30D7\u30ED\u30B0\u30E9\u30E0:
-    \u308F\u3089\u3073\r\n\u30AD\u30E3\u30E9\u30AF\u30BF\u30FC: \u307F\u3063\u3064\u30FC\r\n\u30B5\u30A6\u30F3\u30C9:
-    G-REN"
+    \u308F\u3089\u3073\r\nUI: \u308F\u3089\u3073\n\u30AD\u30E3\u30E9\u30AF\u30BF\u30FC:
+    \u307F\u3063\u3064\u30FC\r\n\u30B5\u30A6\u30F3\u30C9: G-REN"
 --- !u!222 &60650545
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -462,7 +462,7 @@ Prefab:
     - target: {fileID: 224311172971821578, guid: 2fc8c8e8d0dc3964691cc1d76376907e,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 1662
+      value: 1428
       objectReference: {fileID: 0}
     - target: {fileID: 224311172971821578, guid: 2fc8c8e8d0dc3964691cc1d76376907e,
         type: 2}
@@ -566,7 +566,7 @@ Prefab:
     - target: {fileID: 224181204253677990, guid: c914f4a0aedb9244a98a6bae3ca10abb,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 1194
+      value: 960
       objectReference: {fileID: 0}
     - target: {fileID: 224181204253677990, guid: c914f4a0aedb9244a98a6bae3ca10abb,
         type: 2}
