@@ -18,3 +18,4 @@ MonoBehaviour:
   ruleTabUi: {fileID: 1770839203410886, guid: f97f7b190fac64b58a7bd2972348dcc2, type: 2}
   howToPlayTabUi: {fileID: 1554529313666052, guid: 5026675ee27c94d9dbaac8abac21e0de,
     type: 2}
+  creditUi: {fileID: 1543319499222720, guid: 21b2d9ab3ead67c48b099b677e22a6ed, type: 2}

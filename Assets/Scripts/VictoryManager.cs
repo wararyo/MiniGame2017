@@ -11,6 +11,7 @@ public class VictoryManager : MonoBehaviour
     public CueEvent_MCBaloon baloon;
     public PointView pointView1P;
     public PointView pointView2P;
+    public GameObject credit;
 
     int victory;
 
@@ -36,6 +37,13 @@ public class VictoryManager : MonoBehaviour
         pointView2P.Point = Commander.Players[1].point;
 
         winner.Winner = victory;
+
+        foreach(var item in Commander.PlayedMiniGames)
+        {
+            Instantiate(item.creditUi, credit.transform);
+        }
+        credit.SetActive(false);
+        credit.SetActive(true);
     }
 
     // Update is called once per frame

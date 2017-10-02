@@ -67,6 +67,12 @@ MonoBehaviour:
     parameter: 
     paramObject: {fileID: 0}
     UUID: 114a1dcb-ded6-4982-96d5-7807e012b363
+  - time: 0
+    gameObjectName: Manager
+    cueEventID: 6hg7fd040959g8c8vkfjj
+    parameter: False
+    paramObject: {fileID: 0}
+    UUID: 5c3042b3-004f-46e3-926c-05a446549824
   - time: 0.5
     gameObjectName: Manager
     cueEventID: gn7e5t4a09a44099awuyn0
@@ -74,18 +80,30 @@ MonoBehaviour:
     paramObject: {fileID: 0}
     UUID: e4be05b7-47f4-4347-9914-f102f49a9cc1
   - time: 0
-    gameObjectName: Manager
-    cueEventID: 6hg7fd040959g8c8vkfjj
-    parameter: False
+    gameObjectName: Canvas/Credit
+    cueEventID: t79ryhfrc98h0y9y7yts0e
+    parameter: 
     paramObject: {fileID: 0}
-    UUID: 5c3042b3-004f-46e3-926c-05a446549824
+    UUID: cbf1990a-a75a-4dc2-bb70-5e49e740368d
+  - time: 0.8
+    gameObjectName: Canvas/StaffLabel
+    cueEventID: t79ryhfrc98h0y9y7yts0e
+    parameter: 
+    paramObject: {fileID: 0}
+    UUID: 3d08f181-16ee-45f5-a2d1-7160b28832f8
   - time: 0
     gameObjectName: Canvas/MCBaloon
     cueEventID: 4j56789gken765k789sd07jh78
     parameter: "\u305D\u308C\u3067\u306F\u3001\u307E\u305F\u306D\u30FC\u30FC\u30FC\uFF01\uFF01\xA5n\u5F8C\u308D\u306E\u4EBA\u306B\u4EE3\u308F\u3063\u3066\u306D\uFF01\uFF01"
     paramObject: {fileID: 0}
     UUID: cc1a781d-626d-4b8c-8999-677974096be9
-  - time: 9
+  - time: 8
+    gameObjectName: Manager
+    cueEventID: 6g08a0at4igkjaui33
+    parameter: 
+    paramObject: {fileID: 0}
+    UUID: b25f317e-8b74-4c99-a5f8-ac30d3af9e21
+  - time: 2
     gameObjectName: Manager
     cueEventID: s69set9ltegw5uw59jses
     parameter: Title

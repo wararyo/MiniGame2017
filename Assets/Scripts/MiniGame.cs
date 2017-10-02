@@ -11,4 +11,5 @@ public class MiniGame : ScriptableObject {
 	public Sprite screenShot;
 	public GameObject ruleTabUi;
 	public GameObject howToPlayTabUi;
+    public GameObject creditUi;
 }
