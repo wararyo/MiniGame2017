@@ -72,6 +72,7 @@ public class CueEvent_UIInAndOut : CueEventBase {
 		//Debug.Log ("aho");
 		if (isStaged) {//アウトのアニメーション
 			GetComponent<Animator>().Play("Out");
+            isStaged = false;
 		} else {//インのアニメーション
 			if(GetComponent<MaskableGraphic>())GetComponent<MaskableGraphic>().enabled = true;
 			ChildIsEnabled = true;

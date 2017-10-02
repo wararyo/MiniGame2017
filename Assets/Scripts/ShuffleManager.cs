@@ -17,8 +17,10 @@ public class ShuffleManager : MonoBehaviour
     public CriAtomSource audioSource;
     public GameObject anten;
     public CueEvent_MCBaloon baloon;
+    public MyButton nextBtn;
+    public MyButton practiceBtn;
 
-	public List<MiniGame> miniGames;
+    public List<MiniGame> miniGames;
     public List<bool> PlayedGames;
 
     int nextMiniGameID = 0;
@@ -56,6 +58,50 @@ public class ShuffleManager : MonoBehaviour
 
     }
 
+    public void StartPractice()
+    {
+        StartCoroutine(ExecutePracticeWork());
+    }
+
+    IEnumerator ExecutePractice()
+    {
+        string FilePath = getPath() + nextMiniGame.path;
+
+        System.Diagnostics.Process process = new System.Diagnostics.Process();
+        process.StartInfo.FileName = FilePath;
+        process.StartInfo.RedirectStandardOutput = true;
+        process.StartInfo.UseShellExecute = false;
+        //process.OutputDataReceived += new System.Diagnostics.DataReceivedEventHandler(OutputHandler);
+        process.StartInfo.CreateNoWindow = false;
+        process.EnableRaisingEvents = true;
+        process.Exited += new System.EventHandler(Process_Exit);
+        process.StartInfo.WorkingDirectory = System.IO.Path.GetDirectoryName(FilePath);
+        process.StartInfo.Arguments =
+            Commander.Players[0].name + " " +
+            Commander.Players[0].characterId + " " +
+            Commander.Players[1].name + " " +
+            Commander.Players[1].characterId;
+
+        process.Start();
+        //process.BeginOutputReadLine();
+        process.WaitForExit();
+        yield return null;
+    }
+
+    IEnumerator ExecutePracticeWork()
+    {
+        nextBtn.buttonEnabled = false;
+        practiceBtn.buttonEnabled = false;
+        anten.GetComponent<CueEvent_UIInAndOut>().Cue(null);
+        audioSource.Stop();
+        yield return new WaitForSeconds(2);
+        yield return StartCoroutine(ExecutePractice());
+        yield return new WaitForSeconds(2);
+        anten.GetComponent<CueEvent_UIInAndOut>().Cue(null);
+        audioSource.Play();
+        nextBtn.buttonEnabled = true;
+    }
+
     public void StartMiniGame()
     {
         StartCoroutine(ExecuteMiniGameWork());
@@ -88,6 +134,8 @@ public class ShuffleManager : MonoBehaviour
 
     IEnumerator ExecuteMiniGameWork()
     {
+        nextBtn.buttonEnabled = false;
+        practiceBtn.buttonEnabled = false;
         anten.GetComponent<CueEvent_UIInAndOut>().Cue(null);
         audioSource.Stop();
         yield return new WaitForSeconds(2);

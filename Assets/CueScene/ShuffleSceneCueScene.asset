@@ -56,6 +56,12 @@ MonoBehaviour:
     paramObject: {fileID: 0}
     UUID: 
   - time: 0
+    gameObjectName: Canvas/Instruction/PracticeBtn
+    cueEventID: 6hgtw098woishtw609
+    parameter: True
+    paramObject: {fileID: 0}
+    UUID: fd90c358-3d6c-4557-9341-9447a6d6f2a0
+  - time: 0
     gameObjectName: Manager
     cueEventID: 6hg7fd040959g8c8vkfjj
     parameter: False
@@ -67,6 +73,12 @@ MonoBehaviour:
     parameter: False
     paramObject: {fileID: 0}
     UUID: a7021ee9-f753-43cf-b342-fb6a2f4b0731
+  - time: 0
+    gameObjectName: Canvas/Instruction/PracticeBtn
+    cueEventID: 6hgtw098woishtw609
+    parameter: False
+    paramObject: {fileID: 0}
+    UUID: 6c538b19-3f1a-49d8-8c5d-ad1d679289e3
   - time: 0
     gameObjectName: Manager
     cueEventID: 6hg7fd040959g8c8vkfjj
