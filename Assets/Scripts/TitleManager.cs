@@ -7,6 +7,7 @@ public class TitleManager : MonoBehaviour {
 
     public List<VideoClip> videos;
     public GameObject videoUI;
+    public float videoWaitTime = 60;
 
     VideoPlayer videoPlayer;
 
@@ -24,7 +25,7 @@ public class TitleManager : MonoBehaviour {
 
     IEnumerator playVideoWork()
     {
-        yield return new WaitForSecondsRealtime(6);
+        yield return new WaitForSecondsRealtime(videoWaitTime);
         videoPlayer.clip = videos[Random.Range(0,videos.Count - 1)];
         videoPlayer.loopPointReached += VideoPlayer_loopPointReached;
         videoPlayer.Play();
@@ -43,7 +44,7 @@ public class TitleManager : MonoBehaviour {
         else
         {
             GetComponent<CriAtomSource>().Stop();
-            SceneNavigator.Instance.Change("Instruction", 1);
+            SceneNavigator.Instance.Change("Instruction", 2);
         }
 	}
 }

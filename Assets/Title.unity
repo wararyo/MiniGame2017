@@ -915,7 +915,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1099951169
+  randomSeed: -709808467
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -4681,6 +4681,7 @@ MonoBehaviour:
   - {fileID: 32900000, guid: b565decdf85868f47b78c06100666b8e, type: 3}
   - {fileID: 32900000, guid: 812c35a140ba065449346450bae75a4c, type: 3}
   videoUI: {fileID: 1090365804}
+  videoWaitTime: 48
 --- !u!114 &1821223168
 MonoBehaviour:
   m_ObjectHideFlags: 0
