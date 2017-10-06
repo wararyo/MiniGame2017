@@ -69,6 +69,7 @@ public class MyButton : MonoBehaviour {
             {
                 anim.SetTrigger("Up");
                 image.sprite = imageDefault;
+                GetComponent<CriAtomSource>().Play();
                 onPressed.Invoke();
                 yield break;
             }

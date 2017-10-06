@@ -58,5 +58,6 @@ public class CueEvent_ShowMiniGameCard : CueEventBase {
 	{
 		card.isVisible = (bool)param;
         GetComponent<Animator>().SetTrigger("Trigger");
+        GetComponent<CriAtomSource>().Play();
 	}
 }

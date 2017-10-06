@@ -28,7 +28,7 @@ MonoBehaviour:
   - time: -1
     gameObjectName: Canvas/MCBaloon
     cueEventID: 4j56789gken765k789sd07jh78
-    parameter: "\u79C1\u306F\u5929\u306E\u58F0\u3067\u3059\u3002\u3069\u3046\u305E\u3088\u308D\u3057\u304F\u304A\u306D\u304C\u3044\u3057\u307E\u3059\u3002"
+    parameter: "\u79C1\u304C\u53F8\u4F1A\u3092\u3057\u307E\u3059\u3002\u3069\u3046\u305E\u3088\u308D\u3057\u304F\u304A\u306D\u304C\u3044\u3057\u307E\u3059\u3002"
     paramObject: {fileID: 0}
     UUID: 80e7afb2-e0a3-4a7c-94bc-e47a6751e4b7
   - time: -1

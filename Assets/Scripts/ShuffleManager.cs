@@ -19,6 +19,8 @@ public class ShuffleManager : MonoBehaviour
     public CueEvent_MCBaloon baloon;
     public MyButton nextBtn;
     public MyButton practiceBtn;
+    public Animator Character1;
+    public Animator Character2;
 
     public List<MiniGame> miniGames;
     public List<bool> PlayedGames;
@@ -159,12 +161,16 @@ public class ShuffleManager : MonoBehaviour
 				Commander.Players [0].point++;
                 baloon.replaceList.Add("Winner", "1P");
 				winner = 1;
-			}
+                Character1.SetBool("Happy", true);
+                Character2.SetBool("Sad", true);
+            }
 			else if (stdout.StartsWith("2"))//2Pの勝ち
 			{
 				Commander.Players [1].point++;
                 baloon.replaceList.Add("Winner", "2P");
 				winner = 2;
+                Character1.SetBool("Sad", true);
+                Character2.SetBool("Happy", true);
             }
             else if (stdout.ToLower().StartsWith("esc"))
             {

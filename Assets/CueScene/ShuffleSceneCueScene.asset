@@ -92,6 +92,18 @@ MonoBehaviour:
     paramObject: {fileID: 0}
     UUID: 025f313b-5bce-467a-8fd3-47b4b4a530ae
   - time: 0
+    gameObjectName: Canvas/1PCharacter
+    cueEventID: 466g78978re8944wzjfarg
+    parameter: Trigger
+    paramObject: {fileID: 0}
+    UUID: 587720e9-2a36-4442-a8ce-ed496cb48348
+  - time: 0
+    gameObjectName: Canvas/2PCharacter
+    cueEventID: 466g78978re8944wzjfarg
+    parameter: Trigger
+    paramObject: {fileID: 0}
+    UUID: f5231a2b-a15b-40bc-82ba-4bacbede8295
+  - time: 0
     gameObjectName: Canvas/Anten
     cueEventID: t79ryhfrc98h0y9y7yts0e
     parameter: 

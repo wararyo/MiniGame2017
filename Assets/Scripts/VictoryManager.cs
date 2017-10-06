@@ -12,6 +12,8 @@ public class VictoryManager : MonoBehaviour
     public PointView pointView1P;
     public PointView pointView2P;
     public GameObject credit;
+    public Animator Character1;
+    public Animator Character2;
 
     int victory;
 
@@ -22,11 +24,15 @@ public class VictoryManager : MonoBehaviour
         {
             victory = 1;
             baloon.replaceList.Add("Victory", "1P");
+            Character1.SetBool("Happy", true);
+            Character2.SetBool("Sad", true);
         }
         else if (Commander.Players[1].point >= 2)
         {
             victory = 2;
             baloon.replaceList.Add("Victory", "2P");
+            Character1.SetBool("Sad", true);
+            Character2.SetBool("Happy", true);
         }
         else
         {

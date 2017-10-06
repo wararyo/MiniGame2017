@@ -26,6 +26,18 @@ MonoBehaviour:
     paramObject: {fileID: 0}
     UUID: e942e1a3-f674-4a60-a941-e2e40e42e512
   - time: 0
+    gameObjectName: Canvas/1PCharacter
+    cueEventID: 466g78978re8944wzjfarg
+    parameter: Trigger
+    paramObject: {fileID: 0}
+    UUID: 87421972-c3fd-46f5-b57c-a7a96062494d
+  - time: 0
+    gameObjectName: Canvas/2PCharacter
+    cueEventID: 466g78978re8944wzjfarg
+    parameter: Trigger
+    paramObject: {fileID: 0}
+    UUID: aab6c72b-82c7-4616-820b-985dc1a5ffaa
+  - time: 0
     gameObjectName: Manager
     cueEventID: 6hg7fd040959g8c8vkfjj
     parameter: False
